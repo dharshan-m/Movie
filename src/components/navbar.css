@@ -1,0 +1,38 @@
+.back_tag{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding-right: 100px;
+}
+.front_tag{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    padding-left: 100px;
+}
+.link_tags{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+.display_navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #032541;
+    height: 65px;
+}
+#colour{
+    color: white;
+    cursor: pointer;
+}
+#title_colour{
+    color: white;
+}
+#pointer{
+    cursor: pointer;
+}

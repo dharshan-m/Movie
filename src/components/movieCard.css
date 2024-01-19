@@ -1,0 +1,95 @@
+.class_movieCard{
+    width: 150px;
+    border-radius: 10px;
+}
+.movie_list{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 1325px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+    transition: transform 0.3s ease;
+    scrollbar-width: thin; 
+    scrollbar-color: darkgrey; 
+    margin-left: 100px;
+    margin-top: 30px;
+}
+::-webkit-scrollbar {
+    width: 8px; 
+    height: 8px; 
+}
+.filter_buttons{
+    border: 2px solid black;
+    width: 350px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+}
+#btns{
+    background-color: white;
+    border-style: none;
+    font-size: larger;
+    border-radius: 50px;
+    width: 120px;
+    height: 40px;
+}
+#btns:hover{
+    background-color: #032541;
+    color: white;
+    cursor: pointer;
+}
+.entire_filter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+.content_filter{
+    font-size: x-large;
+}
+.movie_subcategories {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin-top: 1px;
+    transition: opacity 0.3s ease; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    display: none;
+    opacity: 0;
+}
+
+.movie_subcategories.show {
+    display: flex;
+    opacity: 1;
+}
+
+.buttons_div{
+    position: relative;
+    padding: 10px;
+}
+.subcategory_buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border: 2px solid black;
+    border-radius: 50px;
+    margin-left: 173px;
+}
+.subcategory_buttons_tv{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border: 2px solid black;
+    border-radius: 50px;
+    margin-left: 170px;
+}

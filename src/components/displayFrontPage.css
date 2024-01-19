@@ -1,0 +1,80 @@
+.first_container{
+    background-color: #0581b8;
+    width: 1325px;
+    height: 300px;
+    margin-left: 100px;
+    margin-top: -32px;
+}
+.content_div {
+    color: white;
+    padding-left: 80px;
+}
+h1.head_welcome {
+    font-size: xxx-large;
+}
+.head3_content{
+    font-size: x-large;
+}
+input#book-search {
+    width: 1100px;
+    height: 50px;
+    border-radius: 50px;
+    border-style: none;
+    outline: none;
+    font-size: larger;
+    padding-left: 50px;
+}
+.search_div{
+    display: flex;
+    position: relative;
+    left: 80px;
+    top: 33px;
+}
+.button_click{
+    position: absolute;
+    right: 173px;
+    width: 130px;
+    height: 52px;
+    border-radius: 50px;
+    border-style: none;
+    background-color: #11c6c4;
+    font-size: larger;
+    color: white;
+}
+.button_click:hover{
+    color: black;
+    cursor: pointer;
+}
+.second_container{
+    background-color: #183e4c;
+    width: 1325px;
+    height: 300px;
+    margin-left: 100px;
+    margin-top: -33px;
+}
+#same_value{
+    color: white;
+}
+.wrap_heading{
+    width: 100px;
+}
+.wrap_heading {
+    width: 257px;
+    font-size: -webkit-xxx-large;
+    padding-left: 80px;
+}
+.best_worst_content{
+    padding-left: 80px;
+}
+.button_check{
+    width: 200px;
+    height: 50px;
+    font-size: x-large;
+    margin-left: 80px;
+    background-color: #183e4c;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    margin-top: 12px;
+    cursor: pointer;
+}

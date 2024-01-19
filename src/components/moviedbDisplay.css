@@ -1,0 +1,28 @@
+.overview{
+    width: 800px;
+}
+.image_displaypage{
+    width: 300px;
+    border-radius: 10px;
+}
+#details{
+    color: white;
+}
+#strong{
+    color: #08d5d7;
+}
+.div_imageproperty{
+    margin-left: 300px;
+    margin-top: 25px;
+}
+.details_display{
+    margin-top: 45px;
+}
+.movie_details{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    background-color: #194366;
+    height: 500px;
+    margin-top: 50px;
+}
