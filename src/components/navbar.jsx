@@ -6,17 +6,36 @@ import SearchIcon from '@mui/icons-material/Search';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ExplicitOutlinedIcon from '@mui/icons-material/ExplicitOutlined';
 import AddIcon from '@mui/icons-material/Add';
+import {useNavigate} from 'react-router-dom';
 
-export default function navbar() {
+export default function Navbar() {
+
+  const navigate = useNavigate();
+
+  const ClickMovies=()=>{
+    navigate('/MovieDisplay')
+  }
+  const clickTvshows=()=>{
+    navigate('/TvshowDisplay');
+  }
+  const clickPeople=()=>{
+    // navigate('/PeopleDisplay');
+    window.location.href='http://localhost:3001/people'
+  }
+  const clickMore=()=>{
+    window.location.href="https://developer.themoviedb.org/docs/getting-started"
+  }
+
+
   return (
     <div className='display_navbar'>
         <div className='front_tag'>
             <h1 id='title_colour' className='heading'>TMDB</h1>
             <div className='link_tags'>
-                <p id='colour' className='sub_title'>Movies</p>
-                <p id='colour' className='sub_title'>TV Shows</p>
-                <p id='colour' className='sub_title'>People</p>
-                <p id='colour' className='sub_title'>More</p>
+                <p id='colour' className='sub_title' onClick={ClickMovies}>Movies</p>
+                <p id='colour' className='sub_title' onClick={clickTvshows}>TV Shows</p>
+                <p id='colour' className='sub_title' onClick={clickPeople}>People</p>
+                <p id='colour' className='sub_title' onClick={clickMore}>More</p>
             </div>
         </div>
         <div className='back_tag'>
