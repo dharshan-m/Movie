@@ -1,0 +1,25 @@
+.peopleDisplay{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px 0px;
+    border-radius: 10px;
+}
+.profile_image{
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+}
+.entire_peopleDispaly{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 80px;
+    row-gap: 30px;
+    margin-left: 48px;
+    margin-top: 48px;
+}
+.peopledisplay_name{
+    padding-left: 20px;
+}
+.peopledisplay_department{
+    padding-left: 20px;
+}

@@ -12,19 +12,21 @@ export default function Navbar() {
 
   const navigate = useNavigate();
 
+  const ClickHome=()=>{
+    navigate('/')
+  }
   const ClickMovies=()=>{
-    navigate('/MovieDisplay')
+    navigate('/movie')
   }
   const clickTvshows=()=>{
-    navigate('/TvshowDisplay');
+    navigate('/tv');
   }
   const clickPeople=()=>{
-    // navigate('/PeopleDisplay');
-    window.location.href='http://localhost:3001/people'
+    navigate('/person');
   }
-  const clickMore=()=>{
-    window.location.href="https://developer.themoviedb.org/docs/getting-started"
-  }
+  // const clickMore=()=>{
+  //   window.location.href="https://developer.themoviedb.org/docs/getting-started"
+  // }
 
 
   return (
@@ -32,10 +34,11 @@ export default function Navbar() {
         <div className='front_tag'>
             <h1 id='title_colour' className='heading'>TMDB</h1>
             <div className='link_tags'>
+                <p id='colour' className='sub_title' onClick={ClickHome}>Home</p>
                 <p id='colour' className='sub_title' onClick={ClickMovies}>Movies</p>
                 <p id='colour' className='sub_title' onClick={clickTvshows}>TV Shows</p>
                 <p id='colour' className='sub_title' onClick={clickPeople}>People</p>
-                <p id='colour' className='sub_title' onClick={clickMore}>More</p>
+                {/* <p id='colour' className='sub_title' onClick={clickMore}>More</p> */}
             </div>
         </div>
         <div className='back_tag'>

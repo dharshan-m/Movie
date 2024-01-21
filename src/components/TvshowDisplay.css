@@ -1,0 +1,25 @@
+.tvshowDetails{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px 0px;
+    border-radius: 10px;
+}
+.entire_tvshow{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 80px;
+    row-gap: 40px;
+    margin-left: 90px;
+    margin-top: 48px;
+}
+.tvshow_imageDispaly{
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+}
+.tvshow_name{
+    padding-left: 20px;
+}
+.tvshow_releaseDate{
+    padding-left: 20px;
+}

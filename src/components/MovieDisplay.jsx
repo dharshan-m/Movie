@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react'
+import './MovieDisplay.css'
+import Navbar from './navbar';
 
 export default function MovieDisplay() {
 
@@ -11,12 +13,21 @@ export default function MovieDisplay() {
     },[])
 
     return (
-        <div>
-            {
-                displayMovie.map((movies)=>(
-                    <img src={movies.poster_path} alt={movies.title} className='movies_imageDisply'/>
-                ))
-            }
+        <div className='moviedetails_navbar'>
+            <Navbar/>
+            <div className='entire_moviedetails'>
+                {
+                    displayMovie.map((movies)=>(
+                        <>
+                            <div className='mevieDispaly'>
+                                <img  src={`https://image.tmdb.org/t/p/w500${movies.poster_path}`} alt={movies.title} className='movies_imageDisply'/>
+                                <h3 className='movieDispaly_title'>{movies.title}</h3>
+                                <p className='movieDispaly_releasedate'>{movies.release_date}</p>
+                            </div>
+                        </>
+                    ))
+                }
+            </div>
         </div>
     )
 }

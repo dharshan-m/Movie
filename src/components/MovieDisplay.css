@@ -1,0 +1,25 @@
+.mevieDispaly{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px 0px;
+    border-radius: 10px;
+}
+.entire_moviedetails{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 80px;
+    row-gap: 30px;
+    margin-left: 48px;
+    margin-top: 48px;
+}
+.movies_imageDisply{
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+}
+.movieDispaly_title{
+    padding-left: 20px;
+}
+.movieDispaly_releasedate{
+    padding-left: 20px;
+}
