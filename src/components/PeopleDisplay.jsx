@@ -26,7 +26,7 @@ export default function PeopleDisplay() {
                 {
                     peopleDisplay.map((people)=>(
                         <>
-                            <div className='peopleDisplay'>
+                            <div key={people.id} className='peopleDisplay'>
                                 <img src={`https://image.tmdb.org/t/p/w500${people.profile_path}`} alt={people.name} className='profile_image' onClick={()=>clickPeopleDetails(people.id)}/>
                                 <h3 className='peopledisplay_name'>{people.name}</h3>
                                 <p className='peopledisplay_department'>{people.known_for_department}</p>

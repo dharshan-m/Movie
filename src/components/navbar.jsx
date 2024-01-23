@@ -37,7 +37,7 @@ export default function Navbar() {
                 <p id='colour' className='sub_title' onClick={ClickHome}>Home</p>
                 <p id='colour' className='sub_title' onClick={ClickMovies}>Movies</p>
                 <p id='colour' className='sub_title' onClick={clickTvshows}>TV Shows</p>
-                <p id='colour' className='sub_title' onClick={clickPeople}>People</p>
+                <p id='colour' className='sub_title' onClick={clickPeople}>Person</p>
                 {/* <p id='colour' className='sub_title' onClick={clickMore}>More</p> */}
             </div>
         </div>
