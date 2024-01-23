@@ -9,18 +9,18 @@
     flex-wrap: wrap;
     column-gap: 80px;
     row-gap: 30px;
-    margin-left: 90px;
-    margin-top: 48px;
+    margin-left: 50px;
+    margin-top: 100px;
 }
 .movies_imageDisply{
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 350px;
     border-radius: 10px;
     cursor: pointer;
 }
 .movieDispaly_title{
     padding-left: 20px;
-    width: 300px;
+    width: 250px;
 }
 .movieDispaly_releasedate{
     padding-left: 20px;

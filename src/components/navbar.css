@@ -24,7 +24,12 @@
     align-items: center;
     justify-content: space-between;
     background-color: #032541;
-    height: 65px;
+    height: 40px;
+    position: fixed;
+    padding: 10px;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
 }
 #colour{
     color: white;

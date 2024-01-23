@@ -1,17 +1,57 @@
 import React, {useState} from 'react'
 import './displayFrontPage.css';
+import {useNavigate} from 'react-router-dom';
 
 export default function DisplayFrontpage() {
 
-    const [searchTearm, setSearchTerm] = useState('');
+    const navigate = useNavigate()
+
+    const [searchTerm, setSearchTerm] = useState('');
 
     const handlechangeSearch=(event)=>{
         setSearchTerm(event.target.value)
     }
 
-    const clickSearch=(event)=>{
-        event.preventDefault()
-    }
+
+    const clickSearch = (event) => {
+        event.preventDefault();
+
+        if (searchTerm.trim() !== '') {
+            const isMovie = /^movie$/i.test(searchTerm);
+            const isMovieSearch = /^movie:(.+)$/i.test(searchTerm);
+            const isTvshow = /^tv$/i.test(searchTerm);
+            const isTvshowSearch = /^tv:(.+)$/i.test(searchTerm);
+            const isPerson = /^person$/i.test(searchTerm);
+            const isPeopleSearch = /^person:(.+)$/i.test(searchTerm);
+
+            if (isMovie || isMovieSearch) {
+                if (isMovieSearch) {
+                const movieName = searchTerm.match(/^movie:(.+)$/i)[1];
+                navigate(`/movies/${movieName}`);
+                } else {
+                navigate('/movie');
+                }
+            } else if (isTvshow || isTvshowSearch) {
+                if(isTvshowSearch){
+                    const tvshowName = searchTerm.match(/^tv:(.+)$/i)[1];
+                    navigate(`/tv/${tvshowName}`);
+                }else{
+                    navigate(`/tv`)
+                }
+            } else if (isPerson || isPeopleSearch) {
+                if(isPeopleSearch){
+                    const personName = searchTerm.match(/^person:(.+)$/i)[1];
+                    navigate(`/person/${personName}`);
+                }else{
+                    navigate(`/person`)
+                }
+            } else {
+                navigate(`/movie/${searchTerm}`);
+            }
+        }
+    };
+
+
     return (
         <div className='total_container'>
             <div className='first_container'>
@@ -20,7 +60,7 @@ export default function DisplayFrontpage() {
                     <h3 className='head3_content'>Millions of movies, TV shows and people to discover. Explore now.</h3>
                 </div>
                 <div className='search_div'>
-                    <input type="text" placeholder="Search for a movie,tv show, person..." id='book-search' className='search_input' value={searchTearm} onChange={handlechangeSearch}/>
+                    <input type="text" placeholder="Search for a movie,tv show, person..." id='book-search' className='search_input' value={searchTerm} onChange={handlechangeSearch}/>
                     <button className='button_click' onClick={clickSearch}>Search</button>
                 </div>  
             </div>

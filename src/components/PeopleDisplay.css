@@ -6,7 +6,7 @@
 }
 .profile_image{
     width: 300px;
-    height: 400px;
+    height: 350px;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -16,7 +16,7 @@
     column-gap: 80px;
     row-gap: 30px;
     margin-left: 48px;
-    margin-top: 48px;
+    margin-top: 100px;
 }
 .peopledisplay_name{
     padding-left: 20px;
