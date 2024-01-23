@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import './TvshowDisplay.css';
 import Navbar from './navbar';
+import {useNavigate} from 'react-router-dom';
 
 export default function TvshowDisplay() {
 
@@ -12,6 +13,12 @@ export default function TvshowDisplay() {
         .then((data)=> setTvshowDisply(data.results))
     }, [])
 
+    const navigate = useNavigate();
+
+    const clicktvDetails=(id)=>{
+        navigate(`/tv/${id}`)
+    }
+
     return (
         <div className='tvshow_navbar'>
             <Navbar/>
@@ -20,7 +27,7 @@ export default function TvshowDisplay() {
                     tvshowDispaly.map((tvshow)=>(
                         <>
                             <div className='tvshowDetails'>
-                                <img src={`https://image.tmdb.org/t/p/w500${tvshow.backdrop_path}`} alt={tvshow.title} className='tvshow_imageDispaly'/>
+                                <img src={`https://image.tmdb.org/t/p/w500${tvshow.backdrop_path}`} alt={tvshow.title} className='tvshow_imageDispaly' onClick={()=>clicktvDetails(tvshow.id)}/>
                                 <h3 className='tvshow_name'>{tvshow.name}</h3>
                                 <p className='tvshow_releaseDate'>{tvshow.first_air_date}</p>
                             </div>

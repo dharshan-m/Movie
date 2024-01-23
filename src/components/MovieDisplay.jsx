@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import './MovieDisplay.css'
 import Navbar from './navbar';
+import {useNavigate} from 'react-router-dom';
 
 export default function MovieDisplay() {
 
@@ -12,6 +13,12 @@ export default function MovieDisplay() {
         .then((data)=>setDisplayMovie(data.results))
     },[])
 
+    const navigate = useNavigate()
+    
+    const clickDetailpage=(id)=>{
+        navigate(`/movies/${id}`);
+    }
+
     return (
         <div className='moviedetails_navbar'>
             <Navbar/>
@@ -20,7 +27,7 @@ export default function MovieDisplay() {
                     displayMovie.map((movies)=>(
                         <>
                             <div className='mevieDispaly'>
-                                <img  src={`https://image.tmdb.org/t/p/w500${movies.poster_path}`} alt={movies.title} className='movies_imageDisply'/>
+                                <img  src={`https://image.tmdb.org/t/p/w500${movies.poster_path}`} alt={movies.title} className='movies_imageDisply' onClick={() => clickDetailpage(movies.id)}/>
                                 <h3 className='movieDispaly_title'>{movies.title}</h3>
                                 <p className='movieDispaly_releasedate'>{movies.release_date}</p>
                             </div>
